@@ -28,6 +28,7 @@ namespace player
             {
                 isAttackAvailable = false;
                 Invoke(nameof(EnableAttack), _attackCooldown);
+                Debug.Log("Attack");
             }
         }
 
@@ -36,6 +37,7 @@ namespace player
             if (context.performed) // Проверяем, что навык был использован
             {
                 // Здесь можно добавить логику для навыка
+                Debug.Log("Flash");
             }
         }
 
@@ -44,6 +46,7 @@ namespace player
             if (context.performed) // Проверяем, что использование было выполнено
             {
                 // Здесь можно добавить логику для использования предметов
+                Debug.Log("Use");
             }
         }
 
