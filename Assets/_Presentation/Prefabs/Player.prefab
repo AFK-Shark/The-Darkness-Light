@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 7709948310538430256}
+  mageBook: {fileID: 0}
+  _attackCooldown: 1.1
 --- !u!114 &1503438970115031499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +241,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1082160266592019189
 BoxCollider2D:
   m_ObjectHideFlags: 0

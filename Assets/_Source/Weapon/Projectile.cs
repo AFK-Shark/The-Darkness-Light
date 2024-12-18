@@ -6,7 +6,7 @@ namespace Weapon
     public class Projectile : MonoBehaviour
     {
         public float damage = 10f;
-        public float lifetime = 5f;
+        public float lifetime = 1f;
         private Rigidbody2D rb;
 
         private void Awake()
@@ -22,13 +22,22 @@ namespace Weapon
         public void Initialize(Vector2 direction)
         {
             rb.velocity = direction * 10f;
+
+            if (direction.x < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Enemy"))
             {
-                TestEnemy enemy = other.GetComponent<TestEnemy>();
+                TakeDamageEnemy enemy = other.GetComponent<TakeDamageEnemy>();
                 if (enemy != null)
                 {
                     enemy.TakeDamage(damage);

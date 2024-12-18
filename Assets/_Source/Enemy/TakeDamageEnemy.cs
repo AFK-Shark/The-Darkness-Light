@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Enemy
 {
-    public class TestEnemy : MonoBehaviour
+    public class TakeDamageEnemy : MonoBehaviour
     {
         public float health = 50f;
 

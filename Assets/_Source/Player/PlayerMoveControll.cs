@@ -7,8 +7,8 @@ namespace player
     public class PlayerMoveControl : MonoBehaviour
     {
         [SerializeField] private Player _player;
-        [SerializeField] private MageBook mageBook; // —сылка на скрипт MageBook
-        [SerializeField] private float _attackCooldown = 1.1f;
+        [SerializeField] private MageBook mageBook;
+        [SerializeField] private float _attackCooldown = 3f;
 
         private Vector2 _moveDirection;
         private float _moveSpeed;
@@ -29,8 +29,15 @@ namespace player
             if (isAttackAvailable && context.performed)
             {
                 isAttackAvailable = false;
-                mageBook.ShootProjectile();
+
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePosition.z = 0;
+
+                Vector2 direction = (mousePosition - transform.position).normalized;
+
+                mageBook.ShootProjectile(direction);
                 Invoke(nameof(EnableAttack), _attackCooldown);
+                Debug.Log("Attack");
             }
         }
 
