@@ -3,11 +3,12 @@ using player;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;            // Ссылка на игрока
-    public float speed = 2f;            // Скорость движения моба
-    public float attackRange = 1f;      // Радиус атаки
-    public int damage = 4;              // Урон, который наносит моб
-    private bool isAttacking = false;   // Статус атаки
+    public Transform player;           
+    public float speed = 2f;            
+    public float attackRange = 1f;      
+    public int damage = 4;              
+    private bool isAttacking = false;
+    public int mobHealth;
 
     void Update()
     {
