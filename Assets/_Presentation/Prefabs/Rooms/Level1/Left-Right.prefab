@@ -1247,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn Point (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6501532389151446723, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
+      propertyPath: direction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8637785390799672670, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -2705,6 +2709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn Point
       objectReference: {fileID: 0}
+    - target: {fileID: 6501532389151446723, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
+      propertyPath: direction
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8637785390799672670, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3076,6 +3084,10 @@ PrefabInstance:
     - target: {fileID: 5833438052448327244, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
       propertyPath: m_Name
       value: Spawn Point (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501532389151446723, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
+      propertyPath: direction
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8637785390799672670, guid: 75ce71d44680e2f4bad8055969c77794, type: 3}
       propertyPath: m_LocalPosition.x

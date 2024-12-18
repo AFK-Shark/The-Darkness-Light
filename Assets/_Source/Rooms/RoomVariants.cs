@@ -6,17 +6,9 @@ namespace Rooms
 {
     public class RoomVariants : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        public GameObject[] topRooms;
+        public GameObject[] bottomRooms;
+        public GameObject[] rightRooms;
+        public GameObject[] leftRooms;
     }
-
 }
