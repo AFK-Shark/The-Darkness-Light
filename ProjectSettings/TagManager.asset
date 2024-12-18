@@ -8,6 +8,7 @@ TagManager:
   - block
   - Room Point
   - Enemy
+  - Rooms
   layers:
   - Default
   - TransparentFX
