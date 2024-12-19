@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3698163819782947933}
   - component: {fileID: 6081613105568975502}
+  - component: {fileID: 7564844709866107309}
   - component: {fileID: 8474179130432198727}
   - component: {fileID: 406511158565688702}
   - component: {fileID: 1485920109188418563}
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7249090274408734321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5628564, y: -1.433399, z: 0}
+  m_LocalPosition: {x: -3.2155614, y: 1.4944088, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,6 +88,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7564844709866107309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249090274408734321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3596039993e07bf438a9fd33cc6edebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 2
+  attackRange: 1
+  damage: 4
 --- !u!114 &8474179130432198727
 MonoBehaviour:
   m_ObjectHideFlags: 0

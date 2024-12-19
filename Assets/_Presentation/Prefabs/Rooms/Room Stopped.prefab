@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57139974754798591}
   - component: {fileID: 5852602622759909233}
+  - component: {fileID: -1657745557843016014}
   m_Layer: 0
   m_Name: Room Stopped
   m_TagString: Untagged
@@ -77,3 +78,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23926067, y: 1.9255602}
   m_EdgeRadius: 0
+--- !u!114 &-1657745557843016014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336866166211002788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff4dbff9ba7913469ccb62c406d4e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  block: {fileID: 6459301251236866656, guid: 4f5832754e527294d9d76cb16c97490a, type: 3}
