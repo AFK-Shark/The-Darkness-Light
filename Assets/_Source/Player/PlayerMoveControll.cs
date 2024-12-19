@@ -10,6 +10,8 @@ namespace player
         [SerializeField] private MageBook mageBook;
         [SerializeField] private float _attackCooldown = 3f;
 
+        [SerializeField] private PlayerAnimationHandler _animationHandler;
+
         private Vector2 _moveDirection;
         private float _moveSpeed;
         private bool isAttackAvailable = true;
@@ -22,6 +24,7 @@ namespace player
         public void OnMove(InputAction.CallbackContext context)
         {
             _moveDirection = context.ReadValue<Vector2>();
+            UpdateAnimation();
         }
 
         public void OnAttack(InputAction.CallbackContext context)
@@ -51,6 +54,12 @@ namespace player
             Vector3 moveDirection = new Vector3(direction.x, direction.y) * _moveSpeed * Time.deltaTime;
             transform.position += moveDirection;
         }
+
+        private void UpdateAnimation()
+        {
+            _animationHandler.HandleMovementAnimation(_moveDirection);
+        }
+
 
         private void EnableAttack()
         {
