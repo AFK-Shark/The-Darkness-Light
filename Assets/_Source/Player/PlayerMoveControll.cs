@@ -8,7 +8,7 @@ namespace player
     {
         [SerializeField] private Player _player;
         [SerializeField] private MageBook mageBook;
-        [SerializeField] private float _attackCooldown = 3f;
+        [SerializeField] private float _attackCooldown = 0.5f;
 
         [SerializeField] private PlayerAnimationHandler _animationHandler;
 
