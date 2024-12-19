@@ -10,5 +10,6 @@ namespace Rooms
         public GameObject[] bottomRooms;
         public GameObject[] rightRooms;
         public GameObject[] leftRooms;
+        public Transform spawnPoint;
     }
 }
