@@ -10,7 +10,6 @@ namespace Enemy
         public float attackRange = 1f;
         public int damage = 4;
         private bool isAttacking = false;
-        public int mobHealth;
 
         void Update()
         {
@@ -31,8 +30,26 @@ namespace Enemy
 
         void MoveTowardsPlayer()
         {
-            // Двигаем моба к позиции игрока
             Vector3 direction = (player.position - transform.position).normalized;
+
+            // Поворачиваем врага в сторону игрока
+            if (direction != Vector3.zero) // Проверка, чтобы избежать ошибок при делении на ноль
+            {
+
+                // Отзеркаливаем модель по оси X в зависимости от положения игрока
+                if (player.position.x < transform.position.x)
+                {
+                    // Игрок слева, отзеркаливаем модель
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else
+                {
+                    // Игрок справа, восстанавливаем нормальный масштаб
+                    transform.localScale = new Vector3(1, 1, 1);
+                }
+            }
+
+            // Перемещение врага к игроку
             transform.position += direction * speed * Time.deltaTime;
         }
 
@@ -41,15 +58,13 @@ namespace Enemy
             if (!isAttacking)
             {
                 isAttacking = true;
-                // Предполагается, что у вас есть метод, который отвечает за нанесение урона игроку
                 Player playerHealth = player.GetComponent<Player>();
                 if (playerHealth != null)
                 {
                     playerHealth.TakeDamage(damage);
                 }
 
-                // Восстановление статуса атаки после небольшого промежутка времени
-                Invoke("ResetAttack", 1f); // Задержка между атаками (1 секунда)
+                Invoke("ResetAttack", 1f);
             }
         }
 
